@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Outing Invitation</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive;
+      text-align: center;
+      background: linear-gradient(45deg, #FFA07A, #FFB6C1);
+      background-size: 400% 400%;
+      animation: gradientAnimation 10s infinite;
+      justify-content: center;
+      
+    }
+
+    @keyframes gradientAnimation {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+   
+    #invitation-text {
+      font-size: 50px;
+      margin-bottom: 20px;
+      color: #800080;
+      position: relative;
+      display: inline-block;
+      padding: 10px;
+      border-radius: 20px;
+      background-color: #ffffff; /* White bubble background */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+
+    @keyframes floatAnimation {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+
+    #buttons-container {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    .button {
+      padding: 15px 30px;
+      font-size: 18px;
+      cursor: pointer;
+      border: none;
+      border-radius: 8px;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    #yes-button {
+      background-color: #78d07b;
+      color: white;
+    }
+
+    #no-button {
+      background-color: #e64c75;
+      color: white;
+      position: relative;
+    }
+
+
+    #container2 {
+      margin-top: 20%;
+      margin-left: 50%;
+      position: absolute;
+       }
+    
+    #bear {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: bearDance 2s ease-in-out infinite;
+    }
+
+    @keyframes bearDance {
+      0%, 100% {
+        transform: translateX(-50%) translateY(0) rotate(0);
+      }
+      25% {
+        transform: translateX(-50%) translateY(-20px) rotate(15deg);
+      }
+      50% {
+        transform: translateX(-50%) translateY(0) rotate(0);
+      }
+      75% {
+        transform: translateX(-50%) translateY(-20px) rotate(-15deg);
+      }
+    } 
+
+    #bear img {
+      width: 150px;
+    }
+
+    #bear .left-hand, #bear .right-hand {
+      position: absolute;
+      width: 30px;
+      height: 80px;
+      background: #703e27; /* Brown color */
+      border-radius: 15px;
+    }
+
+    #bear .left-hand {
+      left: -25px;
+      top: 80px;
+      transform: rotate(20deg);
+      animation: handMove 2s ease-in-out infinite;
+    }
+
+    #bear .right-hand {
+      right: -25px;
+      top: 80px;
+      transform: rotate(-20deg);
+      animation: handMove 2s ease-in-out infinite;
+    }
+
+    @keyframes handMove {
+      0%, 100% {
+        transform: rotate(20deg);
+      }
+      50% {
+        transform: rotate(-20deg);
+      }
+    }
+
+    #container {
+      margin-top: 5%;
+    }
+  </style>
+</head>
+<body>
+  
+  <div id="container">
+    <div id="invitation-text">
+      <p>Do you wanna go out with me?</p>
+      <div id="bubble"></div>
+    </div>
+    
+
+    <div id="buttons-container">
+      <a href="calendar.html">
+        <button class="button" id="yes-button" onclick="openCalendar()">Yes</button>
+      </a>
+      <button class="button" id="no-button" onmouseover="moveNo()">No</button>
+    </div>
+
+ 
+
+ <div id="container2">
+    <div id="bear">
+      <div class="left-hand"></div>
+      <img src="https://cdn1.iconfinder.com/data/icons/bear-emoticons-1/210/Bear-13-512.png">
+      <div class="right-hand"></div>
+    </div>
+  </div>
+
+  <script>
+    function openCalendar() {
+      document.getElementById('buttons-container').style.display = 'none';
+      document.getElementById('calendar-container').style.display = 'block';
+    }
+
+    function moveNo() {
+      var button = document.getElementById('no-button');
+      var newPositionX = Math.floor(Math.random() * 400);
+      var newPositionY = Math.floor(Math.random() * 300);
+      button.style.left = newPositionX + 'px';
+      button.style.top = newPositionY + 'px';
+    }
+  </script>
+</body>
+</html>
