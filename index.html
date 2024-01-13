@@ -7,7 +7,7 @@
   <title>Outing Invitation</title>
   <style>
     body {
-      font-family: 'Comic Sans MS', cursive;
+      font-family: 'Comic Sans MS';
       text-align: center;
       background: linear-gradient(45deg, #FFA07A, #FFB6C1);
       background-size: 400% 400%;
@@ -31,7 +31,7 @@
     }
 
     #invitation-text {
-      font-size: 2vw; /* Responsive font size */
+      font-size: 4vw; /* Responsive font size for mobile */
       margin-bottom: 2vw;
       color: #800080;
       position: relative;
@@ -55,15 +55,15 @@
     #buttons-container {
       display: flex;
       /* Adjusted for mobile layout */
+      flex-direction: column;
       gap: 1vw;
       align-items: center;
-      margin-top: 1vw;
-      justify-content: center;
+      margin-top: 2vw;
     }
 
     .button {
       padding: 3vw 3vw;
-      font-size: 2vw;
+      font-size: 4vw; /* Responsive font size for mobile */
       cursor: pointer;
       border: none;
       border-radius: 1vw;
@@ -87,11 +87,10 @@
 
     #bear {
       position: absolute;
-      top: 10%;
+      top: 20vw; /* Adjusted for better positioning on mobile */
       left: 50%;
       transform: translateX(-50%);
       animation: bearDance 2s ease-in-out infinite;
-      margin-top: 2vw; /* Adjusted for better positioning on mobile */
     }
 
     @keyframes bearDance {
@@ -113,27 +112,27 @@
     }
 
     #bear img {
-      width: 15vw;
+      width: 40vw; /* Adjusted for mobile */
     }
 
     #bear .left-hand, #bear .right-hand {
       position: absolute;
-      width: 3vw;
-      height: 8vw;
+      width: 8vw; /* Adjusted for mobile */
+      height: 20vw; /* Adjusted for mobile */
       background: #703e27;
-      border-radius: 1.5vw;
+      border-radius: 4vw; /* Adjusted for mobile */
     }
 
     #bear .left-hand {
-      left: -2.5vw;
-      top: 8vw;
+      left: -6vw; /* Adjusted for mobile */
+      top: 20vw; /* Adjusted for mobile */
       transform: rotate(20deg);
       animation: handMove 2s ease-in-out infinite;
     }
 
     #bear .right-hand {
-      right: -2.5vw;
-      top: 8vw;
+      right: -6vw; /* Adjusted for mobile */
+      top: 20vw; /* Adjusted for mobile */
       transform: rotate(-20deg);
       animation: handMove 2s ease-in-out infinite;
     }
@@ -160,16 +159,17 @@
 
       #bear {
         margin-top: 4vw;
-        width: 50vw;
+        width: 70vw; /* Adjusted for mobile */
       }
 
       #bear img {
-        width: 50vw;
+        width: 70vw; /* Adjusted for mobile */
       }
 
       #bear .left-hand, #bear .right-hand {
-        width: 10vw;
-        height: 20vw;
+        width: 14vw; /* Adjusted for mobile */
+        height: 35vw; /* Adjusted for mobile */
+        border-radius: 7vw; /* Adjusted for mobile */
       }
     }
   </style>
@@ -205,7 +205,7 @@
       }
 
       function moveNo() {
-        var a = 0.3 * innerHeight;
+        var a = 0.6 * window.innerWidth; /* Adjusted for better positioning on mobile */
         var button = document.getElementById('no-button');
         var newPositionX = Math.floor(Math.random() * a);
         var newPositionY = Math.floor(Math.random() * a);
