@@ -152,6 +152,7 @@
     #container {
       margin-top: 5%;
     }
+    
   </style>
 </head>
 
@@ -186,9 +187,10 @@
       }
 
       function moveNo() {
+        var a = 0.1*innerHeight;
         var button = document.getElementById('no-button');
-        var newPositionX = Math.floor(Math.random() * 400);
-        var newPositionY = Math.floor(Math.random() * 300);
+        var newPositionX = Math.floor(Math.random() * a);
+        var newPositionY = Math.floor(Math.random() * a);
         button.style.left = newPositionX + 'px';
         button.style.top = newPositionY + 'px';
       }
