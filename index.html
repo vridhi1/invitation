@@ -92,7 +92,7 @@
       left: 50%;
       transform: translateX(-50%);
       animation: bearDance 2s ease-in-out infinite;
-      margin-top: 1vh;
+      margin-top: 3vh;
     }
 
     @keyframes bearDance {
@@ -114,27 +114,27 @@
     }
 
     #bear img {
-      width: 15vw;
+      width: 15vh;
     }
 
     #bear .left-hand, #bear .right-hand {
       position: absolute;
-      width: 3vw;
-      height: 8vw;
+      width: 3vh;
+      height: 8vh;
       background: #703e27;
       border-radius: 1.5vw;
     }
 
     #bear .left-hand {
-      left: -2.5vw;
-      top: 8vw;
+      left: -2.5vh;
+      top: 8vh;
       transform: rotate(20deg);
       animation: handMove 2s ease-in-out infinite;
     }
 
     #bear .right-hand {
-      right: -2.5vw;
-      top: 8vw;
+      right: -2.5vh;
+      top: 8vh;
       transform: rotate(-20deg);
       animation: handMove 2s ease-in-out infinite;
     }
@@ -187,7 +187,7 @@
       }
 
       function moveNo() {
-        var a = 0.1*innerHeight;
+        var a = 0.3*innerHeight;
         var button = document.getElementById('no-button');
         var newPositionX = Math.floor(Math.random() * a);
         var newPositionY = Math.floor(Math.random() * a);
