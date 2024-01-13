@@ -12,7 +12,6 @@
       background: linear-gradient(45deg, #FFA07A, #FFB6C1);
       background-size: 400% 400%;
       animation: gradientAnimation 10s infinite;
-      justify-content: center;
       margin: 0;
       padding: 0;
     }
@@ -88,11 +87,11 @@
 
     #bear {
       position: absolute;
-      top: 10vh; /* Adjusted for mobile layout */
+      top: 10%;
       left: 50%;
       transform: translateX(-50%);
       animation: bearDance 2s ease-in-out infinite;
-      margin-top: 5vw; /* Adjusted for mobile layout */
+      margin-top: 2vw; /* Adjusted for better positioning on mobile */
     }
 
     @keyframes bearDance {
@@ -114,27 +113,27 @@
     }
 
     #bear img {
-      width: 15vw; /* Responsive size */
+      width: 15vw;
     }
 
     #bear .left-hand, #bear .right-hand {
       position: absolute;
-      width: 3vw; /* Responsive size */
-      height: 8vw; /* Responsive size */
+      width: 3vw;
+      height: 8vw;
       background: #703e27;
-      border-radius: 1.5vw; /* Responsive size */
+      border-radius: 1.5vw;
     }
 
     #bear .left-hand {
-      left: -2.5vw; /* Responsive size */
-      top: 8vw; /* Responsive size */
+      left: -2.5vw;
+      top: 8vw;
       transform: rotate(20deg);
       animation: handMove 2s ease-in-out infinite;
     }
 
     #bear .right-hand {
-      right: -2.5vw; /* Responsive size */
-      top: 8vw; /* Responsive size */
+      right: -2.5vw;
+      top: 8vw;
       transform: rotate(-20deg);
       animation: handMove 2s ease-in-out infinite;
     }
@@ -150,7 +149,28 @@
     }
 
     #container {
-      margin-top: 5vw; /* Adjusted for mobile layout */
+      margin-top: 5%;
+    }
+
+    @media (max-width: 768px) {
+      /* Adjustments for smaller screens (e.g., mobile) */
+      #invitation-text {
+        font-size: 4vw;
+      }
+
+      #bear {
+        margin-top: 4vw;
+        width: 50vw;
+      }
+
+      #bear img {
+        width: 50vw;
+      }
+
+      #bear .left-hand, #bear .right-hand {
+        width: 10vw;
+        height: 20vw;
+      }
     }
   </style>
 </head>
@@ -168,7 +188,6 @@
         <button class="button" id="yes-button" onclick="openCalendar()">Yes</button>
       </a>
       <button class="button" id="no-button" onmouseover="moveNo()" onclick="moveNo()">No</button>
-
     </div>
 
     <div id="container2">
@@ -195,5 +214,4 @@
       }
     </script>
   </body>
-
 </html>
