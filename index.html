@@ -55,11 +55,11 @@
 
     #buttons-container {
       display: flex;
-       /* Adjusted for mobile layout */
+      /* Adjusted for mobile layout */
       gap: 1vw;
       align-items: center;
       margin-top: 1vw;
-      justify-content: center; 
+      justify-content: center;
     }
 
     .button {
@@ -88,11 +88,11 @@
 
     #bear {
       position: absolute;
-      top: 10%;
+      top: 10vh; /* Adjusted for mobile layout */
       left: 50%;
       transform: translateX(-50%);
       animation: bearDance 2s ease-in-out infinite;
-      margin-top: 5vh;
+      margin-top: 5vw; /* Adjusted for mobile layout */
     }
 
     @keyframes bearDance {
@@ -114,27 +114,27 @@
     }
 
     #bear img {
-      width: 15vh;
+      width: 15vw; /* Responsive size */
     }
 
     #bear .left-hand, #bear .right-hand {
       position: absolute;
-      width: 3vh;
-      height: 8vh;
+      width: 3vw; /* Responsive size */
+      height: 8vw; /* Responsive size */
       background: #703e27;
-      border-radius: 1.5vh;
+      border-radius: 1.5vw; /* Responsive size */
     }
 
     #bear .left-hand {
-      left: -2.5vh;
-      top: 8vh;
+      left: -2.5vw; /* Responsive size */
+      top: 8vw; /* Responsive size */
       transform: rotate(20deg);
       animation: handMove 2s ease-in-out infinite;
     }
 
     #bear .right-hand {
-      right: -2.5vh;
-      top: 8vh;
+      right: -2.5vw; /* Responsive size */
+      top: 8vw; /* Responsive size */
       transform: rotate(-20deg);
       animation: handMove 2s ease-in-out infinite;
     }
@@ -150,9 +150,8 @@
     }
 
     #container {
-      margin-top: 5%;
+      margin-top: 5vw; /* Adjusted for mobile layout */
     }
-    
   </style>
 </head>
 
@@ -169,7 +168,7 @@
         <button class="button" id="yes-button" onclick="openCalendar()">Yes</button>
       </a>
       <button class="button" id="no-button" onmouseover="moveNo()" onclick="moveNo()">No</button>
-      
+
     </div>
 
     <div id="container2">
@@ -187,7 +186,7 @@
       }
 
       function moveNo() {
-        var a = 0.3*innerHeight;
+        var a = 0.3 * innerHeight;
         var button = document.getElementById('no-button');
         var newPositionX = Math.floor(Math.random() * a);
         var newPositionY = Math.floor(Math.random() * a);
@@ -196,4 +195,5 @@
       }
     </script>
   </body>
-  </html>
+
+</html>
