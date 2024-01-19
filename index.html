@@ -31,15 +31,15 @@
     }
 
     #invitation-text {
-      font-size: 10vw; /* Responsive font size for mobile */
-      margin-bottom: 2vw;
+      font-size: 2em; /* Responsive font size for mobile, adjusted */
+      margin-bottom: 1em; /* Adjusted */
       color: #800080;
       position: relative;
       display: inline-block;
-      padding: 2vw;
-      border-radius: 2vw;
+      padding: 1em;
+      border-radius: 1em;
       background-color: #ffffff;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.1); /* Adjusted */
     }
 
     @keyframes floatAnimation {
@@ -48,31 +48,33 @@
       }
 
       50% {
-        transform: translateY(-2vw);
+        transform: translateY(-0.5em); /* Adjusted */
       }
     }
 
     #buttons-container {
       display: flex;
-      /* Adjusted for mobile layout */
-      gap: 2vw;
+      gap: 0.5em; /* Adjusted */
       align-items: center;
-      margin-top: 2vw;
-      margin-left: 30%;
+      margin-top: 1em; /* Adjusted */
     }
 
     .button {
-      padding: 3vw 3vw;
-      font-size: 10vw; /* Responsive font size for mobile */
+      padding: 1.5em 1.5em; /* Adjusted */
+      font-size: 2em; /* Responsive font size for mobile, adjusted */
       cursor: pointer;
       border: none;
-      border-radius: 1vw;
+      border-radius: 0.5em;
       transition: background-color 0.3s ease-in-out;
+      margin-left: 40vw;
+      margin-right: -40vw;
+      
     }
 
     #yes-button {
       background-color: #78d07b;
       color: white;
+      
     }
 
     #no-button {
@@ -87,7 +89,7 @@
 
     #bear {
       position: absolute;
-      top: 20vw; /* Adjusted for better positioning on mobile */
+      top: 2em; /* Adjusted for better positioning on mobile */
       left: 50%;
       transform: translateX(-50%);
       animation: bearDance 2s ease-in-out infinite;
@@ -99,7 +101,7 @@
       }
 
       25% {
-        transform: translateX(-50%) translateY(-2vw) rotate(15deg);
+        transform: translateX(-50%) translateY(-0.5em) rotate(15deg); /* Adjusted */
       }
 
       50% {
@@ -107,32 +109,32 @@
       }
 
       75% {
-        transform: translateX(-50%) translateY(-2vw) rotate(-15deg);
+        transform: translateX(-50%) translateY(-0.5em) rotate(-15deg); /* Adjusted */
       }
     }
 
     #bear img {
-      width: 40vw; /* Adjusted for mobile */
+      width: 10em; /* Adjusted for mobile */
     }
 
     #bear .left-hand, #bear .right-hand {
       position: absolute;
-      width: 8vw; /* Adjusted for mobile */
-      height: 20vw; /* Adjusted for mobile */
-      background: #703e27;
-      border-radius: 4vw; /* Adjusted for mobile */
+      width: 2em; /* Adjusted for mobile */
+      height: 5em; /* Adjusted for mobile */
+      background: #4d2118e7;
+      border-radius: 1em; /* Adjusted for mobile */
     }
 
     #bear .left-hand {
-      left: -6vw; /* Adjusted for mobile */
-      top: 20vw; /* Adjusted for mobile */
+      left: -1.5em; /* Adjusted for mobile */
+      top: 5em; /* Adjusted for mobile */
       transform: rotate(20deg);
       animation: handMove 2s ease-in-out infinite;
     }
 
     #bear .right-hand {
-      right: -6vw; /* Adjusted for mobile */
-      top: 20vw; /* Adjusted for mobile */
+      right: -1.5em; /* Adjusted for mobile */
+      top: 5em; /* Adjusted for mobile */
       transform: rotate(-20deg);
       animation: handMove 2s ease-in-out infinite;
     }
@@ -152,24 +154,23 @@
     }
 
     @media (max-width: 768px) {
-      /* Adjustments for smaller screens (e.g., mobile) */
       #invitation-text {
-        font-size: 10vw;
+        font-size: 2em; /* Responsive font size for smaller screens */
       }
 
       #bear {
-        margin-top: 4vw;
-        width: 70vw; /* Adjusted for mobile */
+        margin-top: 4em;
+        width: 70%; /* Adjusted for mobile */
       }
 
       #bear img {
-        width: 70vw; /* Adjusted for mobile */
+        width: 70%; /* Adjusted for mobile */
       }
 
       #bear .left-hand, #bear .right-hand {
-        width: 14vw; /* Adjusted for mobile */
-        height: 35vw; /* Adjusted for mobile */
-        border-radius: 7vw; /* Adjusted for mobile */
+        width: 14%; /* Adjusted for mobile */
+        height: 35%; /* Adjusted for mobile */
+        border-radius: 7%; /* Adjusted for mobile */
       }
     }
   </style>
@@ -179,14 +180,13 @@
 
   <div id="container">
     <div id="invitation-text">
-      <p>Do you want some ice-cream?</p>
+      <p>Do you want ice-cream?</p>
       <div id="bubble"></div>
     </div>
 
     <div id="buttons-container">
       <a href="calendar.html">
-<!--         <button class="button" id="yes-button" onclick="openCalendar()">Yes</button> -->
-<button class="button" id="yes-button">Yes</button>
+        <button class="button" id="yes-button" onclick="openCalendar()">Yes</button>
       </a>
       <button class="button" id="no-button" onmouseover="moveNo()" onclick="moveNo()">No</button>
     </div>
@@ -206,14 +206,14 @@
       }
 
       function moveNo() {
-        var a = 0.6 * window.innerWidth; /* Adjusted for better positioning on mobile */
-        newPositionX < window.innerWidth;
-        newPositionY < window.innerHeight;
+        var a = 0.2 * window.innerWidth; /* Adjusted for better positioning on mobile */
         var button = document.getElementById('no-button');
         var newPositionX = Math.floor(Math.random() * a);
         var newPositionY = Math.floor(Math.random() * a);
         button.style.left = newPositionX + 'px';
         button.style.top = newPositionY + 'px';
+        newPositionX < window.width;
+        newPositionY < window.innerHeight;
       }
     </script>
   </body>
