@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>January 2024 Calendar</title>
   <style>
     body {
-      font-family: 'Arial', sans-serif;
+      font-family: 'Comic Sans MS', cursive;
       text-align: center;
-      background-color: #ffdbe6; /* Light Pink Background */
-      color: #d32f2f; /* Dark Red Text Color */
+      background-color: #fce4ec; /* Lavender Pink Background */
+      color: #e91e63; /* Pink Text Color */
     }
 
     h1 {
-      color: #880e4f; /* Dark Pink Heading Color */
+      color: #d81b60; /* Raspberry Pink Heading Color */
     }
 
     table {
@@ -23,25 +24,31 @@
     }
 
     th, td {
-      padding: 10px;
-      border: 1px solid #ff80ab; /* Light Pink Border */
+      padding: 15px;
+      border: 2px solid #f8bbd0; /* Pink Border */
     }
 
     th {
-      background-color: #f48fb1; /* Light Red/Pink Header Background */
+      background-color: #f48fb1; /* Rose Pink Header Background */
       color: white; /* White Text Color */
     }
 
     caption {
       font-size: 24px;
       margin-bottom: 10px;
-      color: #880e4f; /* Dark Pink Caption Color */
+      color: #d81b60; /* Raspberry Pink Caption Color */
+    }
+
+    /* Cute Heart Emoji Styling */
+    .heart {
+      color: #e91e63; /* Pink Heart Color */
     }
   </style>
 </head>
+
 <body>
 
-  <h1>Please save the date ❤️</h1>
+  <h1>Please save the date <span class="heart">❤️</span></h1>
   <p>January 2024</p>
   <table>
     <thead>
@@ -90,7 +97,7 @@
         <td style="color: #d32f2f;">20</td> <!-- Dark Red Text Color for Numbers -->
         <td style="color: #d32f2f;">21</td> <!-- Dark Red Text Color for Numbers -->
         <td style="color: #d32f2f;">22</td> <!-- Dark Red Text Color for Numbers -->
-        <td style="color: #d32f2f;">23</td> <!-- Dark Red Text Color for Numbers -->
+        <td style="color: #d32f2f;">23</td> 
       </tr>
       <tr>
         <td style="color: #d32f2f;">24</td> <!-- Dark Red Text Color for Numbers -->
@@ -98,7 +105,7 @@
         <td style="color: #d32f2f;">26</td> <!-- Dark Red Text Color for Numbers -->
         <td style="color: #d32f2f;">27</td> <!-- Dark Red Text Color for Numbers -->
         <td style="color: #d32f2f;">28</td> <!-- Dark Red Text Color for Numbers -->
-        <td style="color: #d32f2f;">29❤️</td> <!-- Dark Red Text Color for Numbers with Heart Emoji -->
+        <td style="color: #d32f2f;cursor: pointer;" onclick="openPlacePage()">29❤️</td>
         <td style="color: #d32f2f;">30</td> <!-- Dark Red Text Color for Numbers -->
       </tr>
       <tr>
@@ -112,5 +119,13 @@
       </tr>
     </tbody>
   </table>
+
+  <script>
+    function openPlacePage() {
+      window.location.href = 'place.html';
+    }
+  </script>
+
 </body>
+
 </html>
